@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Win Predictor</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body class="my-app">
+    <div class="top">
+
+        <form method="post">
+            <div class="qut">
+
+                <div class="container">
+                    <h1 class="title">IPL Win Predictor</h1>
+                    <div class="form-container">
+                        <div class="form-group">
+                            <label for="batting-team">Select the batting team:</label>
+                            <select id="batting-team" name="input_text1" id="input_text1">
+                                <option value="1">Mumbai Indians</option>
+                                <option value="0">Sunrisers Hyderabad</option>
+                                <option value="2">Rajasthan Royals</option>
+                                <option value="3">Royal Challengers Bangalore</option>
+                                <option value="4">Delhi Capitals</option>
+                                <option value="5">Kolkata Knight Riders</option>
+                                <option value="6">Kings XI Punjab</option>
+                                <option value="7">Chennai Super Kings</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bowling-team">Select the bowling team:</label>
+                            <select name="input_text2" id="input_text2">
+                                <option value="0">Sunrisers Hyderabad</option>
+                                <option value="1">Mumbai Indians</option>
+                                <option value="2">Rajasthan Royals</option>
+                                <option value="3">Royal Challengers Bangalore</option>
+                                <option value="4">Delhi Capitals</option>
+                                <option value="5">Kolkata Knight Riders</option>
+                                <option value="6">Kings XI Punjab</option>
+                                <option value="7">Chennai Super Kings</option>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="host-city">Select host city:</label>
+                            <select id="host-city" name="input_text3" id="input_text3">
+                                <option value="0">Hyderabad</option>
+                                <option value="1">Bangalore</option>
+                                <option value="2">Mumbai</option>
+                                <option value="3">Indore</option>
+                                <option value="4">Kolkata</option>
+                                <option value="5">Delhi</option>
+                                <option value="6">Jaipur</option>
+                                <option value="7">Chennai</option>
+                                <option value="8">Cape Town</option>
+                                <option value="9">Port Elizabeth</option>
+                                <option value="10">Durban</option>
+                                <option value="11">Centurion</option>
+                                <option value="12">East London</option>
+                                <option value="13">Johannesburg</option>
+                                <option value="14">Kimberley</option>
+                                <option value="15">Bloemfontein</option>
+                                <option value="16">Ahmedabad</option>
+                                <option value="17">Cuttack</option>
+                                <option value="18">Nagpur</option>
+                                <option value="19">Dharamsala</option>
+                                <option value="20">Visakhapatnam</option>
+                                <option value="21">Pune</option>
+                                <option value="22">Raipur</option>
+                                <option value="23">Ranchi</option>
+                                <option value="24">Abu Dhabi</option>
+                                <option value="25">Sharjah</option>
+                                <option value="26">Mohali</option>
+                                <option value="27">Bengaluru</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="target">Target:</label>
+                            <input type="number" name="input_text4" id="input_text4">
+                        </div>
+                        <div class="form-group">
+                            <label for="score">Score:</label>
+                            <input type="number" name="input_text5" id="input_text5">
+                        </div>
+                        <div class="form-group">
+                            <label for="overs">Overs completed:</label>
+                            <input type="number" name="input_text6" id="input_text6">
+                        </div>
+                        <div class="form-group">
+                            <label for="wickets">Wickets out:</label>
+                            <input type="number" name="input_text7" id="input_text7">
+                        </div>
+                        <button id="predict-button">Predict Probability</button>
+                    </div>
+                    <div class="result-container">
+                        <h2 id="batting-team-header"></h2>
+                        <h2 id="bowling-team-header"></h2>
+                    </div>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <script src="script.js"></script>
+
+
+            </div>
+        </form>
+
+        <div class="output">
+            <form method="get">
+
+                {% output %}
+                <h2 id="out1"> {{ output }}</h2>
+
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
